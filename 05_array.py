@@ -86,14 +86,14 @@ def test_myarray():
     array_a.delete(0)
     for num in range(1,6):
         assert array_a[num-1] == num
-    array_a.insert(3,0)
+    assert len(array_a) == 5
     array_a.insert(-1,0)
+    assert array_a[0] == 0
+    array_a.delete(-3)
     array_a.insert(100,10000)
+    assert array_a[3] == 4
+    assert array_a.find(-1) == 10000
     print(array_a)
-    #assert array_a[3] == 0
-    #assert array_a.find(3) == 0
-    #assert len(array_a) == 8
-    #array_a.print_all()
 
 
 
